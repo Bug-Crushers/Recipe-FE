@@ -9,7 +9,9 @@ function Login(props) {
 
         <div>
             Here is the Login component
-            <input type='text' />    
+            <input type='text' placeholder='Username'/>
+            <input type='email;' placeholder='Email'/>
+            <input type='password' placeholder='Password'/>   
         </div>
     )
 }
