@@ -24,6 +24,9 @@ function authReducer(state = initialState, action) {
         case (types.LOGIN_FAILURE):
             return { ...state, error: true, loading: false };
 
+        case (types.LOGOUT):
+            return { ...state, toen: '' }
+
         default:
             return state;
     }

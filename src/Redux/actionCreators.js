@@ -31,3 +31,7 @@ export const login = userData => dispatch => {
 
 }
 
+export const logout = () => {
+    return { type: types.LOGOUT}
+}
+
