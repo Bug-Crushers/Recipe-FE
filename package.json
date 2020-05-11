@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "chakra-ui": "^0.3.9",
     "formik": "^2.1.4",
+    "linkedin-login-for-react": "^1.2.3",
     "passport-oauth": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -22,7 +23,7 @@
     "yup": "^0.28.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
