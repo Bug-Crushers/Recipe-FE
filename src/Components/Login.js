@@ -27,7 +27,7 @@ function Login(props) {
         <Formik
                 initialValues={initialStart}
                 validationSchema={validation}
-                onSubmit={props.register}
+                onSubmit={props.login}
                 render={props => {
                     return (
                         <Form>
