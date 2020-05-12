@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { register } from '../Redux/actionCreators';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import Twitter from './Twitter';
 
 const initialState = {
     email: '',
@@ -25,6 +26,7 @@ function Register(props) {
     return (
         <div>
             This is the Register component
+            <Twitter/>
             <Formik
                 initialValues={initialState}
                 validationSchema={validation}
