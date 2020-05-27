@@ -43,7 +43,7 @@ function Register(props) {
                         render={props => {
                             return (
                                 <Form>
-                                    <h2 style={{ color: '#3AAF9F', marginTop: '20px' }}> Create Account</h2>
+                                    <h2 style={{ color: '#3AAF9F', marginTop: '20px', marginBottom:'50px' }}> Create Account</h2>
 
                                     <div>
                                         <Field className='input-style' name='email' type='email' placeholder='Email' />

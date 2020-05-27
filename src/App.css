@@ -44,7 +44,8 @@
     /* margin-top: 50px;
     margin-bottom: 50px; */
     height: 650px;
-    background-image: url("./Images/bg.jpg");
+    background-color: #F0F4F3;
+    /* background-image: url("./Images/bg.jpg"); */
     padding-top:20px;
     
 }
@@ -83,13 +84,15 @@
   padding: 20px;
 }
 
+
+
 .input-style{
-  height: 12px;
-  width: 375px;
+  height: 30px;
+  width: 320px;
   padding: 15px;
   border-radius: 5px;
   background: #F4F8F7;
-  margin: 20px;
+  margin-bottom: 10px;
   border: 2px solid #ffffff;
 }
 
