@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { register } from '../Redux/actionCreators';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+
+
 
 const initialState = {
     email: '',
@@ -23,33 +26,44 @@ function Register(props) {
 
 
     return (
-        <div>
-            This is the Register component
-            <Formik
-                initialValues={initialState}
-                validationSchema={validation}
-                onSubmit={props.register}
-                render={props => {
-                    return (
-                        <Form>
+        <div className='container'>
+            <div className='mini-container'>
+                <section className='reg-section'>
+                    <h2 className='welcome'>Welcome Back Friend! </h2>
+                    <br/> To keep connected with us pls
+                login with your personal info <br />
+                    <button className='submit'> <Link to='/login'>Login </Link></button>
+                </section>
 
-                            <div>
-                                <Field name='email' type='email' placeholder='Email' />
-                                <ErrorMessage name='email' component='div' />
-                            </div>
+                <section className='formik-section'>
+                    <Formik
+                        initialValues={initialState}
+                        validationSchema={validation}
+                        onSubmit={props.register}
+                        render={props => {
+                            return (
+                                <Form>
+                                    <h2 style={{ color: '#3AAF9F', marginTop: '20px', marginBottom:'50px' }}> Create Account</h2>
 
-                            <div>
-                                <Field name='password' type='password' placeholder='Password' />
-                                <ErrorMessage name='password' component='div' />
-                            </div>
+                                    <div>
+                                        <Field className='input-style' name='email' type='email' placeholder='Email' />
+                                        <ErrorMessage name='email' component='div' />
+                                    </div>
 
-                            <button type='submit'>Submit</button>
-                        </Form>
-                    )
-                }}
-            >
+                                    <div>
+                                        <Field className='input-style' name='password' type='password' placeholder='Password' />
+                                        <ErrorMessage name='password' component='div' />
+                                    </div>
 
-            </Formik>
+                                    <button className='submit-button' type='submit'>Register</button>
+                                </Form>
+                            )
+                        }}
+                    >
+
+                    </Formik>
+                </section>
+            </div>
         </div>
     )
 }
