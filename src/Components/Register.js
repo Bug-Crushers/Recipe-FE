@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { register } from '../Redux/actionCreators';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -29,9 +30,9 @@ function Register(props) {
             <div className='mini-container'>
                 <section className='reg-section'>
                     <h2 className='welcome'>Welcome Back Friend! </h2>
-                    <br className='text' /> To keep connected with us pls
+                    <br/> To keep connected with us pls
                 login with your personal info <br />
-                    <button className='submit'>Login</button>
+                    <button className='submit'> <Link to='/login'>Login </Link></button>
                 </section>
 
                 <section className='formik-section'>

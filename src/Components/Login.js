@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 import { login } from '../Redux/actionCreators';
 import { Formik, ErrorMessage, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 const initialStart = {
-    email:'',
+    email: '',
     password: '',
 }
 
 function Login(props) {
-    
+
     const validation = Yup.object().shape({
         email: Yup.string()
             .email('Email not valid')
@@ -21,34 +22,47 @@ function Login(props) {
     });
 
     return (
+        <div className='container'>
+            <div className='lgmini-container'>
 
-        <div>
-            Here is the Login component
-        <Formik
-                initialValues={initialStart}
-                validationSchema={validation}
-                onSubmit={props.login}
-                render={props => {
-                    return (
-                        <Form>
+                <section className='formik-section'>
 
-                            <div>
-                                <Field name='email' type='email' placeholder='Email' />
-                                <ErrorMessage name='email' component='div' />
-                            </div>
+                    <Formik
+                        initialValues={initialStart}
+                        validationSchema={validation}
+                        onSubmit={props.login}
+                        render={props => {
+                            return (
+                                <Form>
+                                    <h2 style={{ color: '#3AAF9F', marginTop: '20px' }}> Sign in to Family Recipe</h2>
 
-                            <div>
-                                <Field name='password' type='password' placeholder='Password' />
-                                <ErrorMessage name='password' component='div' />
-                            </div>
+                                    <div>
+                                        <Field className='input-style' name='email' type='email' placeholder='Email' />
+                                        <ErrorMessage name='email' component='div' />
+                                    </div>
 
-                            <button type='submit'>Submit</button>
-                        </Form>
-                    )
-                }}
-            >
+                                    <div>
+                                        <Field className='input-style' name='password' type='password' placeholder='Password' />
+                                        <ErrorMessage name='password' component='div' />
+                                    </div>
 
-            </Formik>
+                                    <button className='submit-button' type='submit'>Login</button>
+                                </Form>
+                            )
+                        }}
+                    >
+
+                    </Formik>
+                </section>
+                <section className='reg-section'>
+                    <h2 className='welcome'>Hello, Friend!</h2>
+                    <p>Please enter your personal details and start your journey with us</p>
+                    <button className='submit'> <Link to='/'> Register </Link></button>
+
+                </section>
+
+
+            </div>
         </div>
     )
 }

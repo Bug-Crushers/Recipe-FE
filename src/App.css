@@ -52,7 +52,16 @@
   display: flex;
   /* justify-content: space-evenly; */
   height: 400px;
-  width: 82%;
+  width: 800px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.lgmini-container{
+  display: flex;
+  /* justify-content: space-evenly; */
+  height: 400px;
+  width: 800px;
   margin: auto;
   margin-top: 70px;
 }
@@ -75,7 +84,7 @@
 }
 
 .input-style{
-  height: 55px;
+  height: 12px;
   width: 375px;
   padding: 15px;
   border-radius: 5px;
