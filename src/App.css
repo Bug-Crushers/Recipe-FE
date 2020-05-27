@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -35,4 +36,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container{  
+    /* width: 100%; */
+    /* border-radius: 12px; */
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+    height: 650px;
+    background-image: url("./Images/bg.jpg");
+    padding-top:20px;
+    
+}
+.mini-container{
+  display: flex;
+  /* justify-content: space-evenly; */
+  height: 400px;
+  width: 82%;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.welcome{
+  color: #ffffff;
+  margin-top:20px
+
+}
+
+.reg-section{
+ background-color: #3AAF9F;
+ padding: 20px;
+
+}
+
+.formik-section{
+  background-color:white;
+  padding: 20px;
+}
+
+.input-style{
+  height: 55px;
+  width: 375px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #F4F8F7;
+  margin: 20px;
+  border: 2px solid #ffffff;
+}
+
+.submit-button{
+  background: #3AAF9F;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    color: white;
+    padding: 0.25em 1em;
+    height: 40px;
+    width: 200px;
+    margin-top:30px;
+}
+.submit{
+  background: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    color: #3AAF9F;
+    padding: 0.25em 1em;
+    height: 40px;
+    width: 200px;
+    margin-top:30px;
+}
+.submit:hover{
+  background: #3AAF9F;
+  color: white;
+}
+
+.submit-button:hover{
+  background: #F4F8F7;;
+  color: #3AAF9F;
 }
