@@ -39,7 +39,7 @@
 }
 
 .container{  
-    /* width: 100%; */
+    width: 100%;
     /* border-radius: 12px; */
     /* margin-top: 50px;
     margin-bottom: 50px; */
@@ -53,7 +53,7 @@
   display: flex;
   /* justify-content: space-evenly; */
   height: 400px;
-  width: 800px;
+  width: 650px;
   margin: auto;
   margin-top: 70px;
 }
@@ -62,7 +62,7 @@
   display: flex;
   /* justify-content: space-evenly; */
   height: 400px;
-  width: 800px;
+  width: 650px;
   margin: auto;
   margin-top: 70px;
 }
@@ -124,4 +124,29 @@
 .submit-button:hover{
   background: #F4F8F7;;
   color: #3AAF9F;
+}
+
+@media (min-width:468px) and (max-width:768px) {
+  .mini-container{
+    width:500px;
+  }
+  .lgmini-container{
+    width:500px;
+  }
+
+  .input-style{
+    width: 200px;
+  }
+}
+
+
+@media  (max-width: 468px) {
+
+  .reg-section{
+    display: none;
+  }
+  .input-style{
+    width: 400px;
+    height: 40px;
+  }
 }
