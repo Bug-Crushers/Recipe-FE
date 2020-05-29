@@ -2,11 +2,11 @@ import * as types from './actionTypes';
 import axios from 'axios';
 import { axiosWithAuth } from '../axiosWithAuth';
 
-export const apiURL = 'https://secret-recipe-be.herokuapp.com/users/';
+export const apiURL = 'https://taughtus.herokuapp.com/api/users/';
 
 export const register = userData => dispatch => {
     dispatch({ type: types.REGISTER_START})
-    return axios.post(`${apiURL}register_login`, userData)
+    return axios.post(`${apiURL}register`, userData)
     .then(res => {
         localStorage.setItem('token', res.data.key)
         dispatch({type: types.REGISTER_SUCCESS, payload:res.data.key});
@@ -19,8 +19,9 @@ export const register = userData => dispatch => {
 
 export const login = userData => dispatch => {
     dispatch({ type: types.LOGIN_START })
-    return axios.post(`${apiURL}register_login`, userData)
+    return axios.post(`${apiURL}login`, userData)
         .then(res => {
+            console.log(res);
             localStorage.setItem('token', res.data.key)
             dispatch({ type: types.LOGIN_SUCCESS, payload: res.data.key });
         })
