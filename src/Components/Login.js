@@ -6,19 +6,16 @@ import { Formik, ErrorMessage, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 const initialState = {
-    username: '',
+    email: '',
     password: '',
 }
 
 function Login(props) {
 
     const validation = Yup.object().shape({
-        // email: Yup.string()
-        //     .email('Email not valid')
-        //     .required('Email is required'),
-        username: Yup.string()
-            .min(3, "Name must be 3 characters or longer")
-            .required("Name is required"),
+        email: Yup.string()
+            .email('Email not valid')
+            .required('Email is required'),
         password: Yup.string()
             .min(8, 'Password must be 8 characters or longer')
             .required('Password is required'),
@@ -39,15 +36,11 @@ function Login(props) {
                                 <Form>
                                     <h2 style={{ color: '#3AAF9F', marginTop: '20px', marginBottom: '50px' }}> Sign in to Family Recipe</h2>
 
-                                    <div>
-                                        <Field className='input-style' name='username' type='text' placeholder='username' />
-                                        <ErrorMessage name='username' component='div' />
-                                    </div>
-                                    {/* 
+                                                                       
                                     <div>
                                         <Field className='input-style' name='email' type='email' placeholder='Email' />
                                         <ErrorMessage name='email' component='div' />
-                                    </div> */}
+                                    </div>
 
                                     <div>
                                         <Field className='input-style' name='password' type='password' placeholder='Password' />
